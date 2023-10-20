@@ -1,7 +1,3 @@
-# Tauri + React + Typescript
+# 大概思路
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+在tauri core里面用rust代码实现了一下fetch（十分精简版），基本是在抄官方给的那个。思路是用tauri的invoke，前端js把fetchOptions传给invoke函数，rust里面把那些东西组装成一个httprequest然后发出去，拦截url现在就是发送前先match，match到了给定的url就拦截下来了。
